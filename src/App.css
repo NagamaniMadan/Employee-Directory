@@ -1,0 +1,265 @@
+/* Base styles */
+.pa-4 {
+  padding: 32px;
+}
+
+/* Page layout */
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 5px);
+  border-radius: 8px; 
+}
+
+/* Employee container */
+.employee-container {
+  overflow: scroll;
+}
+
+/* Team member card */
+
+
+.team-member {
+  margin: 10px 10px 15px 10px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 20px);
+  max-width: 380px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.team-member:hover {
+  background-color: #f7f7f7;
+  transform: translateY(-5px); 
+}
+
+
+/* Team member image */
+.team-member img {
+  border-radius: 50%;
+  width: 100px;
+  height: 60px;
+  margin-right: 20px; 
+  max-width: 55px;
+}
+
+/* Employee details */
+.employee_details {
+  flex-grow: 1; 
+}
+
+/* Employee email */
+.employee_email {
+  flex-grow: 2; 
+  min-width: 100px; 
+  max-width: 50%; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+}
+
+/* Employee name */
+.employee_name {
+  margin: 0;
+  font-size: 16px;
+  color: #0b1316c9; 
+}
+
+/* Grey text color */
+.grey {
+  color: #868BA2; 
+}
+
+/* Heading styles */
+h2 {
+  margin-top: 0;
+}
+
+h3 {
+  color: white;
+  font-size: 25px;
+  margin-left: 35px;
+}
+
+/* Flexbox utility */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+/* Margin utility */
+.ma-l2 {
+  margin-left: 16px;
+}
+
+/* Divider border */
+.divider-border {
+  border: 1px solid rgba(38, 50, 56, 0.16);
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* Header container */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; 
+  background-color: #3f51b5ab;
+}
+
+/* Navigation header */
+.nav-header {
+  color: #ffffff;
+  margin-left: 20px; 
+}
+
+/* Search container */
+.search-container {
+  position: relative;
+}
+
+/* Search input */
+.search-input {
+  padding: 10px 30px 10px 10px; 
+  border: 1px solid #ccc;
+  border-radius: 20px; 
+  width: 325px; 
+  position: relative;
+  left: -10%; 
+  height: 24px;
+  padding-left: 40px;
+  background-image: url('../src/Images/search-icon.png'); 
+  background-size: 45px;
+  background-position: 0px center;
+  background-repeat: no-repeat;
+}
+
+/* Search button */
+.search-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Search button icon */
+.search-button i {
+  color: #666; 
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .team-member {
+    max-width: 100%; 
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+  }
+
+  .team-member img {
+    margin-bottom: 10px; 
+  }
+
+  .employee_details {
+    margin-top: auto; 
+    text-align: center; 
+  }
+
+  .search-container {
+    margin-top: 10px; 
+  }
+
+  .search-input {
+    width: calc(100% - 50px); 
+  }
+
+  .search-button {
+    right: 5px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .team-member {
+    width: calc(100% - 35px); 
+    max-width: none;
+    margin: 10px 0; 
+  }
+  .team-member img {
+    width: 60px; 
+    height: 60px;
+  }
+
+  .employee_details {
+    margin-top: auto; 
+  }
+
+  .search-input {
+    width: calc(100% - 80px); 
+    left: 15px; 
+    padding-left: 30px; 
+    padding-right: 10px; 
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .team-member {
+    max-width: 30%; 
+    margin: 0 20px 40px; 
+  }
+
+  .search-container {
+    max-width: 50%; 
+  }
+
+  .search-input {
+    width: 80%; 
+  }
+
+  .search-button {
+    right: 20px;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .team-member {
+    max-width: calc(45% - 15px); 
+    margin: 0 35px 35px 15px; 
+  }
+  .search-container {
+    max-width: 50%; 
+  }
+
+  .search-input {
+    width: 80%; 
+  }
+
+  .search-button {
+    right: 20px; 
+  }
+}
+
+/* Plus button */
+.plus-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #3f51b5ab; 
+  color: white;
+  font-size: 2em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  z-index: 1000; 
+}
